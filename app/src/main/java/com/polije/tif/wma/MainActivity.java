@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.class.getModifiers(), menu);
+        getMenuInflater().inflate(R.menu.list, menu);
         return true;
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this, adapter.getPosition((CharSequence) listView), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, adapter.getItem(position), Toast.LENGTH_SHORT).show();
     }
 }
