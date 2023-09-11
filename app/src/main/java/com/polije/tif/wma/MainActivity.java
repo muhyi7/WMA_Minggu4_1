@@ -1,5 +1,6 @@
 package com.polije.tif.wma;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setTitle("Negara");
+        }
 
         listView = (ListView)findViewById(R.id.listView);
         adapter = ArrayAdapter.createFromResource(this,R.array.countries_array, android.R.layout.simple_list_item_1);
